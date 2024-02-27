@@ -19,4 +19,4 @@ services:
       - key: dbHost
         value: postgresDB
 databases:
-  -name: postgresDB
+  - name: postgresDB
