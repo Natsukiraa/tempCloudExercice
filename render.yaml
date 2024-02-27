@@ -21,3 +21,7 @@ services:
 databases:
   - name: postgresDB
     plan: free
+    user: userRender
+    password: passwordRender
+    region: frankfurt
+
