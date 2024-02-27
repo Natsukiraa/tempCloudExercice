@@ -18,15 +18,3 @@ services:
         value: passwordRender
       - key: dbHost
         value: postgresDB
-
-databases:
-  - name: postgresDB
-    envVars:
-      - key: database
-        value: renderDB
-      - key: user
-        value: userRender
-      - key: password
-        value: passwordRender
-      - key: host
-        value: postgresDB
