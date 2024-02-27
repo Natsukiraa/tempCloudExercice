@@ -20,3 +20,4 @@ services:
         value: postgresDB
 databases:
   - name: postgresDB
+    plan: free
