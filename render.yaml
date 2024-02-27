@@ -1,0 +1,26 @@
+services:
+  # A Docker web service
+  - type: web
+    name: esgi_nodejs
+    runtime: node
+
+    region: frankfurt # optional (defaults to oregon)
+    plan: standard # optional (defaults to starter instance type)
+    branch: master # optional (defaults to master)
+    rootDir: ./
+    startCommand: npm start # optional (defaults to Dockerfile command)
+    envVars:
+      - key: dbName
+        value: renderDB
+      - key: dbUser
+        value: userRender
+      - key: dbPwd
+        value: passwordRender
+      - key: dbHost
+        value: postgresDB
+
+databases:
+  - name: postgresDB
+    databaseName: renderDB # optional (Render may add a suffix)
+    user: userRender # optional
+    password: passwordRender # optional
