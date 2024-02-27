@@ -10,18 +10,12 @@ services:
     rootDir: ./
     startCommand: npm start # optional (defaults to Dockerfile command)
     envVars:
-      - key: dbName
-        value: renderDB
-      - key: dbUser
-        value: userRender
-      - key: dbPwd
-        value: passwordRender
-      - key: dbHost
-        value: postgresDB
+      - key: dbUrl
+        fromDatabase:
+          name: postgresDB
+          property: connectionString
 databases:
   - name: postgresDB
     plan: free
-    user: userRender
-    password: passwordRender
     region: frankfurt
 
