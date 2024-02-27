@@ -21,6 +21,12 @@ services:
 
 databases:
   - name: postgresDB
-    databaseName: renderDB # optional (Render may add a suffix)
-    user: userRender # optional
-    password: passwordRender # optional
+    envVars:
+      - key: database
+        value: renderDB
+      - key: user
+        value: userRender
+      - key: password
+        value: passwordRender
+      - key: host
+        value: postgresDB
