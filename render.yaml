@@ -8,7 +8,7 @@ services:
     plan: free # optional (defaults to starter instance type)
     branch: main # optional (defaults to master)
     buildCommand: npm install # optional (defaults to no prebuild)
-    rootDir: /
+
     startCommand: npm start # optional (defaults to Dockerfile command)
     envVars:
       - key: dbUrl
