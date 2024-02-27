@@ -6,7 +6,7 @@ services:
 
     region: frankfurt # optional (defaults to oregon)
     plan: free # optional (defaults to starter instance type)
-    branch: master # optional (defaults to master)
+    branch: main # optional (defaults to master)
     rootDir: ./
     startCommand: npm start # optional (defaults to Dockerfile command)
     envVars:
